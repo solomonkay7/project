@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALUM EVENTS - Premium Event Services in Nigeria</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --secondary-color: #16213e;
+            --accent-color: #e94560;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --nigerian-green: #008753;
+            --nigerian-white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 28px;
+            color: white;
+        }
+        
+        .navbar-brand span {
+            color: var(--accent-color);
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d13354;
+            border-color: #d13354;
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            color: var(--primary-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .event-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .price-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: var(--nigerian-green);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .about-section {
+            background-color: var(--light-color);
+            padding: 100px 0;
+        }
+        
+        .service-icon {
+            font-size: 50px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-name {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        .dish-card {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .dish-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .dish-card:hover .dish-img {
+            transform: scale(1.1);
+        }
+        
+        .dish-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px;
+        }
+        
+        .dish-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .dish-price {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+        
+        .nigerian-flag {
+            height: 20px;
+            margin-right: 5px;
+        }
+        
+        .naija-term {
+            color: var(--nigerian-green);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .card-img-top {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">KALUM <span>EVENTS</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dishes">Nigerian Dishes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary ms-2" href="#book-now">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h1 class="hero-title">KALUM EVENTS</h1>
+            <p class="hero-subtitle">Your One-Stop Platform for Memorable Nigerian Events</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#events" class="btn btn-primary btn-lg">Explore Events</a>
+                <a href="#book-now" class="btn btn-outline-light btn-lg">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="py-5" id="events">
+        <div class="container">
+            <h2 class="text-center section-title">Our Event Categories</h2>
+            <p class="text-center mb-5">From <span class="naija-term">Owambe</span> parties to corporate gatherings, we've got you covered!</p>
+            <div class="row">
+                <!-- Event 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Wedding Event">
+                        <span class="event-category">Wedding</span>
+                        <span class="price-tag">From ₦500,000</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Traditional & White Weddings</h5>
+                            <p class="card-text">Complete wedding planning from <span class="naija-term">Introduction</span> to <span class="naija-term">Reception</span> with the best vendors in Nigeria.</p>
+                            <a href="#" class="btn btn-primary">View Packages</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Corporate Event">
+                        <span class="event-category">Corporate</span>
+                        <span class="price-tag">From ₦300,000</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Events</h5>
+                            <p class="card-text">Professional event management for conferences, seminars, AGMs and product launches.</p>
+                            <a href="#" class="btn btn-primary">View Packages</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Birthday Party">
+                        <span class="event-category">Celebration</span>
+                        <span class="price-tag">From ₦250,000</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Birthday & Naming Ceremonies</h5>
+                            <p class="card-text">Celebrate your special days with our <span class="naija-term">owambe</span> style packages or intimate gatherings.</p>
+                            <a href="#" class="btn btn-primary">View Packages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Event Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light" id="services">
+        <div class="container">
+            <h2 class="text-center section-title">Our Premium Services</h2>
+            <p class="text-center mb-5">We provide complete event solutions with authentic Nigerian touch</p>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Catering Services</h4>
+                    <p>From <span class="naija-term">small chops</span> to full course meals, our catering services feature the best of Nigerian cuisine for your events.</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h4>Entertainment</h4>
+                    <p>Book top Nigerian artists, DJs, <span class="naija-term">Fuji</span> bands, and cultural troupes to make your event unforgettable.</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h4>Photography/Videography</h4>
+                    <p>Professional coverage of your events with our team of experienced photographers and videographers.</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Venue Booking</h4>
+                    <p>Access to premium event centers, hotels, and outdoor spaces across major Nigerian cities.</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h4>Event Decor</h4>
+                    <p>Stunning decor setups from traditional <span class="naija-term">aso-ebi</span> themes to modern contemporary designs.</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4>Transportation</h4>
+                    <p>VIP transportation services including luxury cars and <span class="naija-term">danfo</span> buses for guests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nigerian Dishes Section -->
+    <section class="py-5" id="dishes">
+        <div class="container">
+            <h2 class="text-center section-title">Popular Nigerian Dishes</h2>
+            <p class="text-center mb-5">Featured in our catering services - authentic Nigerian flavors!</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Jollof Rice">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Jollof Rice</h5>
+                            <p class="dish-price">₦3,500 per plate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="images/IMG_5951.JPG"dish-img" alt="Pepper Soup">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Pepper Soup</h5>
+                            <p class="dish-price">₦2,500 per serving</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1633945274309-4d4c6b9fdd59?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Pounded Yam">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Pounded Yam & Egusi</h5>
+                            <p class="dish-price">₦4,000 per serving</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1633945274413-7e8b0a8b8b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Suya">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Suya</h5>
+                            <p class="dish-price">₦1,500 per stick</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1633945274413-7e8b0a8b8b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Moi Moi">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Moi Moi</h5>
+                            <p class="dish-price">₦1,200 per wrap</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1633945274413-7e8b0a8b8b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Akara">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Akara</h5>
+                            <p class="dish-price">₦500 per piece</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1633945274413-7e8b0a8b8b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Small Chops">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Small Chops Platter</h5>
+                            <p class="dish-price">₦2,500 per plate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="dish-card">
+                        <img src="https://images.unsplash.com/photo-1633945274413-7e8b0a8b8b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="dish-img" alt="Zobo Drink">
+                        <div class="dish-overlay">
+                            <h5 class="dish-name">Zobo Drink</h5>
+                            <p class="dish-price">₦1,000 per bottle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="py-5 bg-primary text-white" id="book-now">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Ready to Plan Your Event?</h2>
+                    <p>Let us handle the stress while you enjoy your celebration. Our team of <span class="naija-term">event gurus</span> will ensure everything runs smoothly.</p>
+                    <ul class="mb-4">
+                        <li>Free consultation with our event planners</li>
+                        <li>Custom packages to fit your budget</li>
+                        <li>Verified vendors across Nigeria</li>
+                        <li>24/7 customer support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-light btn-lg">Get a Quote</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded" alt="Happy Event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">What Our Clients Say</h2>
+            <p class="text-center mb-5">Don't just take our word for it - hear from satisfied customers</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"KALUM EVENTS made my traditional wedding a dream! From the <span class="naija-term">aso-ebi</span> coordination to the delicious jollof rice, everything was perfect."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                            <div>
+                                <h5 class="client-name mb-0">Amina Yusuf</h5>
+                                <small>Lagos, Nigeria</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Our company's annual retreat was seamlessly organized by KALUM. They handled venue, catering, and even the <span class="naija-term">owambe</span> after-party!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                            <div>
+                                <h5 class="client-name mb-0">Emeka Okonkwo</h5>
+                                <small>Abuja, Nigeria</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The naming ceremony package was worth every kobo! The <span class="naija-term">small chops</span> were delicious and the decor was Instagram-worthy."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                            <div>
+                                <h5 class="client-name mb-0">Chioma Eze</h5>
+                                <small>Port Harcourt, Nigeria</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>Have questions or ready to book? Reach out to our <span class="naija-term">event wizards</span>!</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select">
+                                <option selected>Event Type</option>
+                                <option>Wedding</option>
+                                <option>Corporate</option>
+                                <option>Birthday</option>
+                                <option>Naming Ceremony</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h4><i class="fas fa-map-marker-alt me-2"></i> Our Locations</h4>
+                        <p class="mb-4"><strong>Lagos HQ:</strong> 24 Event Avenue, Victoria Island, Lagos</p>
+                        <p class="mb-4"><strong>Abuja Branch:</strong> 15 Banquet Road, Central Business District, Abuja</p>
+                        <p class="mb-4"><strong>Port Harcourt Branch:</strong> 8 Celebration Close, GRA Phase 2, Port Harcourt</p>
+                        
+                        <h4><i class="fas fa-phone-alt me-2"></i> Call Us</h4>
+                        <p class="mb-4">+234 812 345 6789 (Lagos)</p>
+                        <p class="mb-4">+234 902 345 6789 (Abuja)</p>
+                        
+                        <h4><i class="fas fa-envelope me-2"></i> Email Us</h4>
+                        <p class="mb-4">info@kalumevents.com</p>
+                        
+                        <h4><i class="fas fa-clock me-2"></i> Working Hours</h4>
+                        <p>Monday - Friday: 8am - 6pm</p>
+                        <p>Saturday: 9am - 4pm</p>
+                        <p>Sunday: Emergency bookings only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="navbar-brand mb-3">KALUM <span>EVENTS</span></h3>
+                    <p>Your trusted partner for memorable Nigerian events since 2015. We bring the <span class="naija-term">owambe</span> experience to your doorstep!</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-links">Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#dishes">Nigerian Dishes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-links">Event Types</h5>
+                    <ul>
+                        <li><a href="#">Weddings</a></li>
+                        <li><a href="#">Corporate</a></li>
+                        <li><a href="#">Birthdays</a></li>
+                        <li><a href="#">Naming Ceremonies</a></li>
+                        <li><a href="#">Cultural Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-links">Newsletter</h5>
+                    <p>Subscribe for event tips, special offers, and Nigerian party trends.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="mt-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/1200px-Flag_of_Nigeria.svg.png" class="nigerian-flag" alt="Nigeria Flag">
+                        <small>Proudly Nigerian</small>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>&copy; 2023 KALUM EVENTS. All Rights Reserved. <span class="naija-term">No shaking!</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</body>
+</html>
